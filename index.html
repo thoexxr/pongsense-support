@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PongSense 技术支持 · Support</title>
+<meta name="description" content="PongSense 乒乓球动作分析 iOS App 的官方技术支持页面：使用说明、常见问题、模型与开源组件说明、联系方式。">
+<style>
+:root{
+  --green:#155e46;
+  --green-deep:#0f4433;
+  --green-soft:#e8f3ee;
+  --ink:#1c2321;
+  --muted:#5d6b66;
+  --line:#e2e8e5;
+  --bg:#fbfcfb;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  font-size:16px;line-height:1.72;
+}
+a{color:var(--green);text-decoration:none}
+a:hover{text-decoration:underline}
+header.site{
+  background:linear-gradient(160deg,var(--green-deep),var(--green));
+  color:#fff;padding:44px 20px 38px;
+}
+.wrap{max-width:820px;margin:0 auto;padding:0 20px}
+header.site .wrap{padding:0 20px}
+.brand{display:flex;align-items:center;gap:14px}
+.logo{
+  width:52px;height:52px;border-radius:13px;flex:0 0 auto;
+  background:#fff;display:flex;align-items:center;justify-content:center;
+  font-weight:700;color:var(--green-deep);font-size:19px;letter-spacing:.5px;
+  box-shadow:0 4px 14px rgba(0,0,0,.18);
+}
+h1{margin:0;font-size:26px;line-height:1.3;letter-spacing:.2px}
+.tagline{margin:4px 0 0;color:#cfe5da;font-size:15px}
+nav.top{margin-top:26px;display:flex;flex-wrap:wrap;gap:8px}
+nav.top a{
+  color:#eaf5ef;border:1px solid rgba(255,255,255,.28);border-radius:999px;
+  padding:6px 14px;font-size:14px;background:rgba(255,255,255,.06);
+}
+nav.top a:hover{background:rgba(255,255,255,.14);text-decoration:none}
+
+main{padding:38px 0 10px}
+section{margin:0 0 34px}
+h2{font-size:19px;margin:0 0 12px;letter-spacing:.2px;color:var(--green-deep)}
+h3{font-size:16px;margin:22px 0 8px}
+p{margin:0 0 12px}
+ul{margin:0 0 14px;padding-left:22px}
+li{margin:5px 0}
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:20px 22px;margin:0 0 14px;
+}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.grid .card{margin:0}
+.kv{font-size:14px;color:var(--muted)}
+.badge{
+  display:inline-block;font-size:12px;padding:2px 9px;border-radius:999px;
+  background:var(--green-soft);color:var(--green-deep);border:1px solid #cfe3da;
+  margin-left:6px;vertical-align:2px;
+}
+details{
+  background:var(--card);border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px;margin-bottom:10px;
+}
+details summary{cursor:pointer;font-weight:600;color:var(--ink);list-style:none}
+details summary::-webkit-details-marker{display:none}
+details summary::before{content:"＋";color:var(--green);font-weight:700;margin-right:8px}
+details[open] summary::before{content:"－"}
+details p{margin:10px 0 2px;color:#33413c;font-size:15px}
+table{width:100%;border-collapse:collapse;margin:8px 0 16px;font-size:14px}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:#f4f8f6;font-weight:600;color:var(--green-deep);white-space:nowrap}
+td code,code{
+  background:#f0f4f2;border-radius:5px;padding:1px 6px;
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;
+}
+.note{
+  border-left:3px solid var(--green);background:var(--green-soft);
+  padding:12px 16px;border-radius:0 10px 10px 0;font-size:15px;color:#24463a;
+}
+.muted{color:var(--muted);font-size:14px}
+footer{
+  border-top:1px solid var(--line);margin-top:30px;padding:26px 0 44px;
+  color:var(--muted);font-size:13.5px;
+}
+footer .links{display:flex;flex-wrap:wrap;gap:6px 18px;margin-bottom:10px}
+.en{color:#3d4a45;font-size:15px}
+@media (max-width:520px){
+  header.site{padding:34px 0 30px}
+  h1{font-size:22px}
+  main{padding-top:28px}
+  .card{padding:16px 16px}
+  table{font-size:13px}
+  th,td{padding:8px}
+}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <div class="brand">
+      <div class="logo">PS</div>
+      <div>
+        <h1>PongSense 技术支持</h1>
+        <p class="tagline">一段视频，读出对打技术动作 · Ping-pong stroke analysis, fully on-device</p>
+      </div>
+    </div>
+    <nav class="top">
+      <a href="index.html">技术支持</a>
+      <a href="privacy.html">隐私政策</a>
+      <a href="licenses.html">模型与开源许可</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section>
+    <h2>联系我们</h2>
+    <div class="card">
+      <p><strong>技术支持邮箱：</strong><a href="mailto:thoexxr@hotmail.com">thoexxr@hotmail.com</a></p>
+      <p class="muted">通常 1–2 个工作日内回复。写信时请附上：设备型号、iOS 版本、视频分辨率与拍摄机位（是否固定）、以及结果页显示的命中率，便于定位问题。</p>
+      <p class="muted">也可以在 App Store 产品页的“App 支持”入口提交反馈。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>这个 App 能做什么</h2>
+    <div class="card">
+      <ul>
+        <li><strong>球检测与命中率</strong>：逐帧检出乒乓球，给出这段视频里球可见的比例，让你知道结果有多可靠。</li>
+        <li><strong>人体骨架（17 关键点）</strong>：同时跟踪两名球员的站位与挥拍轨迹，结果图上叠加骨骼。</li>
+        <li><strong>动作技术判定</strong>：按击球点高度、腕部挥动方向、腕速与台外站位，给出弧圈/进攻、挡、发球、搓/摆短，并附确定度。</li>
+        <li><strong>手动球台标定</strong>：首次使用时点出球台四个角，固定机位只需标定一次，之后自动复用。</li>
+        <li><strong>全程离线</strong>：无需注册登录，视频不出设备。</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>快速上手</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>1 · 摆机位</h3>
+        <p class="muted">手机横放在球台侧后方，画面里同时看得到球台和两名球员，整段拍摄不要移动手机。固定机位是关键。</p>
+      </div>
+      <div class="card">
+        <h3>2 · 标定球台</h3>
+        <p class="muted">首次分析会弹出首帧，依次点球台四个角（左上、右上、右下、左下），可拖动微调，点“完成标定”。</p>
+      </div>
+      <div class="card">
+        <h3>3 · 选择视频</h3>
+        <p class="muted">从相册导入一段对打（建议 10 秒以上），选“单打”或“双打”，然后开始分析。</p>
+      </div>
+      <div class="card">
+        <h3>4 · 看结果</h3>
+        <p class="muted">结果页给出帧数、球命中率、人物检出率、骨架叠加图，以及按动作技术分类的击球统计。</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>常见问题</h2>
+
+    <details>
+      <summary>第一次使用为什么要标定球台四个角？</summary>
+      <p>分析需要知道“画面里哪块区域是球台”，才能把误检（墙面、记分牌、观众衣服上的白点）过滤掉，并把左右两侧球员分开。自动标定对低机位、俯角很小的手机实拍会失效，所以改为手动四角：你在首帧上点四个角，App 就算出球台的四条边与中网位置。手机固定不动时，这份标定会被保存并一直复用。</p>
+    </details>
+
+    <details>
+      <summary>命中率只有 20%–30%，是分析失败了吗？</summary>
+      <p>不是。<strong>命中率 = 画面中检出球的比例</strong>。乒乓球直径 40mm，1080p 画面上通常只有约 10 像素，再加上快速挥拍的运动模糊与遮挡，球本来就不会在每一帧里都可见。20%–40% 属于正常范围；命中率过低（低于 10%）通常意味着机位太远、光线太暗，或球台标定不准。</p>
+    </details>
+
+    <details>
+      <summary>一次分析要多久？</summary>
+      <p>取决于机型与视频长度：iPhone 上 10 秒、30fps 的片段通常 1–5 分钟，进度条会实时更新百分比。分析期间请不要把 App 切到后台太久，否则系统可能中断处理。</p>
+    </details>
+
+    <details>
+      <summary>视频会被上传吗？</summary>
+      <p>不会。所有检测与姿态估计都在你的 iPhone 本地完成，App 不发任何网络请求，也不需要账号。详见 <a href="privacy.html">隐私政策</a>。</p>
+    </details>
+
+    <details>
+      <summary>支持哪些设备和系统？</summary>
+      <p>iOS 16.0 及以上，iPhone（含 iPhone 12 及更早机型）。模型为 Core ML 格式，首次运行由系统编译，第一次分析会比之后略慢。</p>
+    </details>
+
+    <details>
+      <summary>竖屏拍的视频为什么效果差？</summary>
+      <p>球台是横向的长条区域，竖屏会把台面压成一条细线，可用的像素面积太小。建议横屏、手机大致与球网同高或略低，画面里球台占到宽度的一半以上。</p>
+    </details>
+
+    <details>
+      <summary>动作技术（弧圈/挡/发球/搓）是怎么判的？“确定度”是什么？</summary>
+      <p>v1.0 不使用动作分类神经网络，而是用几何规则打分：击球点相对球台的高度、腕部挥动的水平方向、腕关节瞬时速度、击球时是否在台外，四项特征加权后取最高分类，并给出这一判定的确定度（0–1）。规则法的好处是可解释、无第三方权重；代价是对极端姿势或遮挡敏感，确定度低时建议人工复核。</p>
+    </details>
+  </section>
+
+  <section>
+    <h2>模型与开源组件</h2>
+    <div class="card">
+      <p>App 内置三个 Core ML 模型文件，全部为 <strong>Apache License 2.0</strong> 许可的开源模型，在设备本地推理、不联网：</p>
+      <table>
+        <tr><th>用途</th><th>模型文件</th><th>开源来源</th></tr>
+        <tr>
+          <td>乒乓球检测</td>
+          <td><code>yolox.mlpackage</code></td>
+          <td>YOLOX-tiny（Megvii YOLOX，Apache-2.0），本项目用自有标注数据微调</td>
+        </tr>
+        <tr>
+          <td>人体骨架 / 17 关键点</td>
+          <td><code>RTMO_Dense.mlpackage</code><br><code>RTMO_DCC.mlpackage</code></td>
+          <td>OpenMMLab <strong>mmpose</strong> 的 RTMO 模型（Apache-2.0）</td>
+        </tr>
+      </table>
+      <p class="muted">骨架识别的后处理（SimCC 解码、坐标映射、关键点置信度筛选）移植自 OpenMMLab mmpose 的 RTMO 推理流程，相关代码与许可声明见 <a href="licenses.html">模型与开源许可</a>。</p>
+    </div>
+    <div class="note">
+      v1.0 <strong>不含</strong>任何非商业许可（如 CC BY-NC-SA）的模型权重。原 ST-GCN 动作分类模型已整体移除，动作判定改为自有几何规则。
+    </div>
+  </section>
+
+  <section>
+    <h2>English quick help</h2>
+    <div class="card en">
+      <p><strong>Support:</strong> <a href="mailto:thoexxr@hotmail.com">thoexxr@hotmail.com</a>. Please include your device model, iOS version, video resolution and whether the phone was fixed on a tripod.</p>
+      <p><strong>Getting started:</strong> mount the phone horizontally behind the side of the table so the table and both players are in frame, keep it still; on first run tap the four corners of the table on the first frame; then pick a rally clip (10 s or longer) and choose singles or doubles.</p>
+      <p><strong>Hit rate 20%–30% is normal.</strong> It is the share of frames in which the ball is visible — a 40 mm ball is roughly 10 pixels at 1080p, and motion blur plus occlusion hide it in most frames. Values below 10% usually mean the camera is too far, light is too low, or the table calibration is off.</p>
+      <p><strong>Everything runs on-device.</strong> No account, no upload, no network requests. Three bundled Core ML models — <code>yolox.mlpackage</code> (YOLOX-tiny, Apache-2.0) and <code>RTMO_Dense.mlpackage</code> / <code>RTMO_DCC.mlpackage</code> (OpenMMLab mmpose RTMO, Apache-2.0) — run locally.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="links">
+      <a href="index.html">技术支持</a>
+      <a href="privacy.html">隐私政策</a>
+      <a href="licenses.html">模型与开源许可</a>
+      <a href="mailto:thoexxr@hotmail.com">邮件联系</a>
+    </div>
+    <p>PongSense · iOS 16.0+ · 版本 1.0（Build 1）<br>
+    © 2026 Xingran Xu. 最后更新 2026-11-20。</p>
+  </footer>
+
+</main>
+</body>
+</html>
