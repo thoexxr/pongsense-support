@@ -229,7 +229,7 @@ footer .links{display:flex;flex-wrap:wrap;gap:6px 18px;margin-bottom:10px}
         <li><code>RTMO_Dense.mlpackage</code> / <code>RTMO_DCC.mlpackage</code> — multi-person pose estimation, OpenMMLab mmpose RTMO.</li>
       </ul>
       <p><strong>Skeleton pipeline:</strong> the pose models plus <code>RTMODecode.swift</code>, a Swift port of mmpose's RTMO post-processing (SimCC decoding, coordinate mapping, keypoint score thresholding). Keypoint layout follows the COCO 17-keypoint order. Player selection, skeleton rendering, table calibration, ball filtering and stroke classification are original code by the author; <code>StrokeRules.swift</code> is a geometric rule scorer and contains no third-party weights.</p>
-      <p><strong>Not shipped in v1.0:</strong> the ST-GCN stroke classifier (<code>stgcn.mlpackage</code>, trained on CC BY-NC-SA 4.0 data) and the demo videos (<code>demo_singles.mp4</code>, <code>demo_doubles.mp4</code>) were removed before submission and are not part of the App Store build.</p>
+
     </div>
   </section>
 
